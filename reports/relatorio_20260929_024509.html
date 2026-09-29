@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang='pt'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>PenKit - Relatorio de Sistema</title>
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #080b10;
+    color: #c9e8f5;
+    font-family: monospace;
+    padding: 30px 18px;
+}
+
+.container {
+    max-width: 1050px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #00e5ff;
+    letter-spacing: 6px;
+    margin-bottom: 8px;
+}
+
+.sub {
+    color: #607987;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: #0d131a;
+    border: 1px solid #00e5ff33;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h2 {
+    color: #00e5ff;
+    font-size: .9rem;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #ffffff12;
+    padding-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 8px 5px;
+    border-bottom: 1px solid #ffffff0d;
+    text-align: left;
+}
+
+td:first-child {
+    color: #718995;
+}
+
+.bar {
+    background: #ffffff10;
+    height: 9px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+}
+
+.value {
+    margin-top: 7px;
+    color: #a9bdc7;
+}
+
+footer {
+    text-align: center;
+    color: #40535e;
+    margin-top: 35px;
+}
+
+</style>
+</head>
+<body>
+<div class='container'>
+<header>
+<h1>PENKIT</h1>
+<div class='sub'>Relatorio de Sistema — 29/09/2026 02:45:09</div>
+</header>
+<div class='grid'>
+<div class='card'>
+<h2>SISTEMA</h2>
+<table>
+<tr><td>Hostname</td><td>localhost</td></tr>
+<tr><td>IP</td><td>10.2.0.2</td></tr>
+<tr><td>OS</td><td>Android 9</td></tr>
+<tr><td>Arquitetura</td><td>aarch64</td></tr>
+<tr><td>CPU</td><td>Nao identificado</td></tr>
+<tr><td>Threads</td><td>8</td></tr>
+<tr><td>Uptime</td><td>?</td></tr>
+<tr><td>Python</td><td>3.14.6</td></tr>
+</table>
+</div>
+<div class='card'>
+<h2>MEMORIA</h2>
+<div class='bar'>
+<div class='fill' style='width:62.4%;background:#ffcc00'></div>
+</div>
+<div class='value'>62.4% — 2.3 GB / 3.6 GB</div>
+</div>
+<div class='card'>
+<h2>DISCO</h2>
+<div class='bar'>
+<div class='fill' style='width:71.5%;background:#ffcc00'></div>
+</div>
+<div class='value'>71.5% — 3.8 GB / 5.3 GB</div>
+</div>
+<div class='card'>
+<h2>REDE</h2>
+<table>
+<tr><th>Interface</th><th>RX</th><th>TX</th></tr>
+<tr><td>tunl0</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni18</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni11</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni5</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>p2p0</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni15</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni20</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni3</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni19</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ip_vti0</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>lo</td><td>16.7 GB</td><td>16.7 GB</td></tr><tr><td>ccmni1</td><td>248.7 MB</td><td>22.4 MB</td></tr><tr><td>ccmni12</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ifb0</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni8</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni16</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ip6tnl0</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni6</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>tun0</td><td>1.9 MB</td><td>1.7 MB</td></tr><tr><td>ip6_vti0</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni13</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>wlan0</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni4</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni17</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni2</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni10</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni-lan</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni9</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>sit0</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni14</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni0</td><td>454.0 MB</td><td>39.8 MB</td></tr><tr><td>ifb1</td><td>0.0 B</td><td>0.0 B</td></tr><tr><td>ccmni7</td><td>0.0 B</td><td>0.0 B</td></tr>
+</table>
+</div>
+</div>
+<footer>
+PenKit OS v2.0 — Relatorio local
+</footer>
+</div>
+</body>
+</html>

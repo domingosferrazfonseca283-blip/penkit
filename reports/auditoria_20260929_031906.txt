@@ -1,0 +1,25 @@
+PENKIT AUDITORIA
+Operador:domingos
+Alvo:10.2.0.0/24
+Inicio:2026-09-29 03:10:36.705472
+Fim:2026-09-29 03:19:06.319915
+========================================
+
+Host:10.2.0.1 (?)
+  [+] 21/tcp FTP
+  [+] 22/tcp SSH
+  [+] 23/tcp Telnet
+  [+] 25/tcp SMTP
+  [+] 53/tcp DNS
+  [+] 80/tcp HTTP
+  [+] 110/tcp POP3
+  [+] 443/tcp HTTPS
+  [+] 445/tcp SMB
+  [+] 3306/tcp MySQL
+  [+] 3389/tcp RDP
+  [+] 5432/tcp PostgreSQL
+  [+] 6379/tcp Redis
+  [+] 8080/tcp HTTP-Alt
+  [+] 27017/tcp MongoDB
+
+Host:10.2.0.2 (?)

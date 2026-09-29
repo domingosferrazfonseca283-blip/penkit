@@ -1,0 +1,8 @@
+PENKIT - ANALISE DE SEGURANCA LOCAL
+Data: 2026-09-29 03:10:09.474911
+============================================================
+
+[FECHADO] SSH local / porta 22: Nao foi detetado listener local na porta 22.
+[NORMAL] Espaco em disco: 71.6% utilizado.
+[INFO] Versao Python: 3.14.6
+[INFO] Permissoes da HOME: 0o700

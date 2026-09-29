@@ -1,0 +1,10 @@
+PENKIT — RELATORIO DE SEGURANCA
+2026-09-29 01:53:27.121897
+========================================
+[OK] SSH porta 22: Fechada
+[OK] Espaco em disco: 71.6% usado
+[OK] Python >= 3.8: v3.14.6
+[OK] Permissoes da home: chmod 700
+[OK] Portas incomuns: Nenhuma detectada
+
+Pontuacao: 100/100
