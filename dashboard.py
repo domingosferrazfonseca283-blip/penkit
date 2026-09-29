@@ -27,6 +27,11 @@ MENU_ITEMS = [
     ("B", "PenKit Analyst", "analyst"),
     ("C", "Vault",          "vault"),
     ("D", "Relatorio PDF",  "pdf_report"),
+    ("E", "Licenca",        "license"),
+    ("F", "Mapa de Rede",   "netmap"),
+    ("G", "Visitas",        "visita"),
+    ("H", "Scan Total",     "scan_total"),
+    ("I", "PDF Cliente",    "pdf_cliente"),
     ("0", "Sair",           None),
 ]
 
@@ -93,9 +98,12 @@ def make_menu():
             title="[bold cyan]MODULOS[/bold cyan]",expand=True)
     t.add_column("#",width=3,justify="center")
     t.add_column("Funcao")
-    CORES=["yellow","red","green","cyan","blue","magenta",
-           "bright_cyan","bright_yellow","bright_red","red",
-           "bold cyan","bold green","bold magenta","dim white"]
+    CORES=[
+        "yellow","red","green","cyan","blue","magenta",
+        "bright_cyan","bright_yellow","bright_red","red",
+        "bold cyan","bold green","bold magenta","bold yellow",
+        "bold blue","dim white"
+    ]
     for i,(key,name,_) in enumerate(MENU_ITEMS):
         cor=CORES[i] if i<len(CORES) else "white"
         if key=="0":
@@ -156,7 +164,7 @@ def make_layout():
     layout["middle"]["sysinfo"].update(make_sysinfo())
     layout["bottom"].update(Panel(
         Align.center(Text(
-            "  [1-9] Modulo   [A-D] Modulos extra   [0] Sair  ",
+            "  [1-9] Modulo   [A-F] Modulos extra   [0] Sair  ",
             style="bold cyan"
         )),
         border_style="cyan"
@@ -167,8 +175,8 @@ def run_module(module_name):
     try:
         mod=__import__(f"modules.{module_name}",fromlist=[module_name])
         mod.run()
-    except ImportError:
-        console.print(Panel(f"[red]Modulo nao encontrado: {module_name}[/red]",border_style="red"))
+    except ImportError as e:
+        console.print(Panel(f"[red]Modulo nao encontrado: {e}[/red]",border_style="red"))
         input("\nEnter...")
     except AttributeError:
         console.print(Panel(f"[yellow]Ainda nao implementado.[/yellow]",border_style="yellow"))

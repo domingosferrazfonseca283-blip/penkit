@@ -132,7 +132,55 @@ def tela_login():
                 time.sleep(2)
                 sys.exit(1)
 
+def verificar_licenca():
+    import sys
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from modules.license import estado_licenca, mostrar_estado
+    from rich.panel import Panel
+    estado, lic, dias = estado_licenca()
+    console.clear()
+    console.print()
+    console.print(Align.center(Text(LOGO, style="bold cyan")))
+    console.print(Align.center(Text("PenKit OS v2.0", style="bold magenta")))
+    console.print()
+    mostrar_estado()
+    console.print()
+    if estado == "activa":
+        if dias <= 7:
+            console.print(Align.center(Text(
+                f"Aviso: licenca expira em {dias} dia(s).", style="bold yellow"
+            )))
+        time.sleep(1.5)
+        return True
+    elif estado == "expirada":
+        console.print(Panel(
+            "[bold yellow]Licenca expirada.\nContacta o desenvolvedor para renovar.\n\nPenKit@gmail.com[/bold yellow]",
+            border_style="yellow"
+        ))
+        input("\nEnter para sair...")
+        return False
+    elif estado == "invalida":
+        console.print(Panel(
+            "[bold red]Licenca invalida neste sistema.\nContacta o desenvolvedor.\n\nPenKit@gmail.com[/bold red]",
+            border_style="red"
+        ))
+        input("\nEnter para sair...")
+        return False
+    else:
+        console.print(Panel(
+            "[bold red]Sem licenca valida.\n\n"
+            "Para obteres uma licenca:\n"
+            "1. Anota o teu Hardware ID (visivel no modulo License)\n"
+            "2. Contacta: PenKit@gmail.com\n"
+            "3. Instala a chave no modulo License[/bold red]",
+            border_style="red"
+        ))
+        input("\nEnter para sair...")
+        return False
+
 def run():
     tela_bios()
     tela_boot()
+    if not verificar_licenca():
+        return
     tela_login()
